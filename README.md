@@ -1,13 +1,13 @@
 About r-alakazam
 ================
 
-Home: https://cran.r-project.org/web/packages/alakazam/index.html
+Home: http://alakazam.readthedocs.org
 
 Package license: CC BY-SA 4.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Provides immunoglobulin (Ig) sequence lineage reconstruction, diversity profiling, and amino acid property analysis.
+Summary: Provides methods for high-throughput adaptive immune  receptor repertoire sequencing (AIRR-Seq; Rep-Seq) analysis. In  particular, immunoglobulin (Ig) sequence lineage reconstruction,  lineage topology analysis, diversity profiling, amino acid property  analysis and gene usage. Citations:  Gupta and Vander Heiden, et al (2017) <doi:10.1093/bioinformatics/btv359>, Stern, Yaari and Vander Heiden, et al (2014) <doi:10.1126/scitranslmed.3008879>.
 
 
 
