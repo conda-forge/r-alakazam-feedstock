@@ -1,5 +1,4 @@
 {% set version = "0.3.0" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -33,34 +32,40 @@ requirements:
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-
   host:
     - r-base
+    - r-matrix
     - r-rcpp >=0.12.12
-    - r-dplyr >=0.5.0
+    - r-ape
+    - r-dplyr >=0.8.1
     - r-ggplot2 >=2.0.0
     - r-igraph >=1.0.0
     - r-lazyeval
     - r-progress
     - r-readr
+    - r-rlang
     - r-scales
     - r-seqinr
     - r-stringi
+    - r-tibble
     - r-tidyr
-
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - r-matrix
     - r-rcpp >=0.12.12
-    - r-dplyr >=0.5.0
+    - r-ape
+    - r-dplyr >=0.8.1
     - r-ggplot2 >=2.0.0
     - r-igraph >=1.0.0
     - r-lazyeval
     - r-progress
     - r-readr
+    - r-rlang
     - r-scales
     - r-seqinr
     - r-stringi
+    - r-tibble
     - r-tidyr
 
 test:
