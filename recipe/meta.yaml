@@ -1,5 +1,4 @@
-{% set version = '0.2.11' %}
-
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -12,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/alakazam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/alakazam/alakazam_{{ version }}.tar.gz
-  sha256: 267855037ba824927d36be3fd8b5c6c2274af4dd9953ba583517dece1278d95c
+  sha256: 6f891805fdbaad0789358b55d65ed83e3a480813a67fe7878c575e554eadeac9
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,40 +25,47 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
-    - {{native}}toolchain        # [win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-
   host:
     - r-base
+    - r-matrix
     - r-rcpp >=0.12.12
-    - r-dplyr >=0.5.0
+    - r-ape
+    - r-dplyr >=0.8.1
     - r-ggplot2 >=2.0.0
     - r-igraph >=1.0.0
     - r-lazyeval
     - r-progress
     - r-readr
+    - r-rlang
     - r-scales
     - r-seqinr
     - r-stringi
+    - r-tibble
     - r-tidyr
-
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - r-matrix
     - r-rcpp >=0.12.12
-    - r-dplyr >=0.5.0
+    - r-ape
+    - r-dplyr >=0.8.1
     - r-ggplot2 >=2.0.0
     - r-igraph >=1.0.0
     - r-lazyeval
     - r-progress
     - r-readr
+    - r-rlang
     - r-scales
     - r-seqinr
     - r-stringi
+    - r-tibble
     - r-tidyr
 
 test:
@@ -79,11 +85,7 @@ about:
 
 extra:
    recipe-maintainers:
-    - dpryan79
+    - conda-forge/r
     - MathiasHaudgaard
     - FrodePedersen
     - ArneKr
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
