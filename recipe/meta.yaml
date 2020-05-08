@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/alakazam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/alakazam/alakazam_{{ version }}.tar.gz
-  sha256: 6f891805fdbaad0789358b55d65ed83e3a480813a67fe7878c575e554eadeac9
+  sha256: b55edf9cacd7874a7fd5bc84877fb5b8252e50df2a3e11773c59f5331b204d24
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -75,11 +75,13 @@ test:
 
 about:
   home: http://alakazam.readthedocs.org
-  license: CC-BY-SA-4.0
+  license: AGPL-3.0-only
   summary: 'Provides methods for high-throughput adaptive immune  receptor repertoire sequencing (AIRR-Seq; Rep-Seq) analysis. In  particular, immunoglobulin (Ig) sequence lineage reconstruction,  lineage topology analysis, diversity profiling, amino acid property  analysis and gene usage. Citations:  Gupta and Vander Heiden,
     et al (2017) <doi:10.1093/bioinformatics/btv359>, Stern, Yaari and Vander Heiden, et al (2014) <doi:10.1126/scitranslmed.3008879>.'
   license_family: CC
 
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3
 extra:
   recipe-maintainers:
     - conda-forge/r
