@@ -3,7 +3,7 @@ About r-alakazam
 
 Home: http://alakazam.readthedocs.org
 
-Package license: CC-BY-SA-4.0
+Package license: AGPL-3.0-only
 
 Feedstock license: BSD 3-Clause
 
