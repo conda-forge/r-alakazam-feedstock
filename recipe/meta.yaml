@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/alakazam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/alakazam/alakazam_{{ version }}.tar.gz
-  sha256: b55edf9cacd7874a7fd5bc84877fb5b8252e50df2a3e11773c59f5331b204d24
+  sha256: 58d629445cea2fa22c0261bd41c5c70ad42b3e93338355ac0206f9c994331a9e
 
 build:
   merge_build_host: true  # [win]
