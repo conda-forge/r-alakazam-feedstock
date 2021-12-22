@@ -33,7 +33,7 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
   host:
-    - r-base >=4.0
+    - r-base
     - bioconductor-biostrings >=2.56.0
     - bioconductor-genomicalignments >=1.24.0
     - bioconductor-iranges >=2.22.2
@@ -54,7 +54,7 @@ requirements:
     - r-tibble
     - r-tidyr
   run:
-    - r-base >=4.0
+    - r-base
     - bioconductor-biostrings >=2.56.0
     - bioconductor-genomicalignments >=1.24.0
     - bioconductor-iranges >=2.22.2
