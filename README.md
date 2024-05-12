@@ -3,6 +3,7 @@ About r-alakazam-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-alakazam-feedstock/blob/main/LICENSE.txt)
 
+
 About r-alakazam
 ----------------
 
@@ -11,6 +12,7 @@ Home: http://alakazam.readthedocs.org
 Package license: AGPL-3.0-only
 
 Summary: Provides methods for high-throughput adaptive immune  receptor repertoire sequencing (AIRR-Seq; Rep-Seq) analysis. In  particular, immunoglobulin (Ig) sequence lineage reconstruction,  lineage topology analysis, diversity profiling, amino acid property  analysis and gene usage. Citations:  Gupta and Vander Heiden, et al (2017) <doi:10.1093/bioinformatics/btv359>, Stern, Yaari and Vander Heiden, et al (2014) <doi:10.1126/scitranslmed.3008879>.
+
 About r-alakazam
 ----------------
 
