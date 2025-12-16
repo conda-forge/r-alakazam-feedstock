@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.4.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/alakazam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/alakazam/alakazam_{{ version }}.tar.gz
-  sha256: 0eb46130b24f2999b07becaa95d1ea9f026e6d87d512eefde27a3c814c7f402d
+  sha256: 94cf30dda9104b2fa9ed31959ce0b381847d798ef656de17fa5d0a689eea39bd
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
